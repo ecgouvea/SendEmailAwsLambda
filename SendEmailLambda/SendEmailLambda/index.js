@@ -8,13 +8,13 @@ exports.handler = (event, context, callback) => {
         },
         Message: {
             Body: {
-                Text: { Data: "Test"
+                Text: { Data: "Test from AWS Lambda"
                     
                 }
                 
             },
             
-            Subject: { Data: "Test Email"
+            Subject: { Data: "Test Email from Lambda"
                 
             }
         },
