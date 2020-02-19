@@ -8,10 +8,9 @@ exports.handler = (event, context, callback) => {
         },
         Message: {
             Body: {
-                Text: { Data: "Test from AWS Lambda"
-                    
+                Text: { 
+                    Data: "Test from AWS Lambda at " + new Date()
                 }
-                
             },
             
             Subject: { Data: "Test Email from Lambda"
@@ -28,7 +27,7 @@ exports.handler = (event, context, callback) => {
             console.log(err);
             context.fail(err);
         } else {
-            
+            console.log("E-mail enviado para " + params.Destination.ToAddresses);
             console.log(data);
             context.succeed(event);
         }
